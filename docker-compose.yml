@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  backend:
+    container_name: backend
+    build:
+      context: backend
+      dockerfile: ./Dockerfile
+    command: 'npm run dev'
+    ports:
+      - '9000:9000'
+    volumes:
+      - ./backend:/usr/server
